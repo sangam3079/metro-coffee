@@ -1,0 +1,86 @@
+.dashboard{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 3%;
+   
+}
+
+.h1 {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) 34px/52px var(--unnamed-font-family-sofia-pro);
+    color: var(--unnamed-color-404d4d);
+    text-align: left;
+    font: normal normal bold 34px/52px Sofia Pro;
+    letter-spacing: 1.02px;
+    color: #404D4D;
+    opacity: 1;
+}
+
+.infocard {
+    border-radius: 15px;
+}
+
+.miniCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Sofia Pro;
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-title {
+            font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) var(--unnamed-font-size-16)/24px var(--unnamed-font-family-sofia-pro);
+            letter-spacing: var(--unnamed-character-spacing-0);
+            text-align: left;
+            font: normal normal bold 11px Sofia Pro;
+            letter-spacing: 0px;
+            color: #404D4DB3;
+            text-transform: capitalize;
+            opacity: 1;
+        }
+
+        &-number {
+            font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-18)/var(--unnamed-line-spacing-28) var(--unnamed-font-family-sofia-pro);
+            letter-spacing: var(--unnamed-character-spacing-0);
+            text-align: left;
+            font: normal normal bold 20px/38px Sofia Pro;
+            letter-spacing: 0px;
+            color: #404D4DED;
+            text-transform: capitalize;
+            opacity: 1;
+        }
+    }
+
+
+    &-graph {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 3px ;
+        margin-top: -5px;
+        &-chart {
+            width: 40px;
+            height: 10px;
+        }
+        &-detail{
+            
+            &-info {
+                font-size: small;
+                color: #03F834;
+            }
+            &-arrow {
+                height: 12px;
+                width: 10px; 
+                margin-left: 3px;
+            }
+            &-info-neg {
+                font-size: small;
+                color: #FF0000;
+                
+            }
+        }
+        
+    }
+}
