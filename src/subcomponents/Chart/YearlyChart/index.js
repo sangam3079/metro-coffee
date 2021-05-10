@@ -2,7 +2,7 @@ import React from 'react'
 import ChartistGraph from 'react-chartist'
 import ChartistTooltip from 'chartist-plugin-tooltips-updated'
 import data from './data.json'
-import './stylesmodules.scss'
+import '../stylesmodules.scss'
 
 
 const options = {
@@ -35,7 +35,7 @@ const options = {
   ],
 }
 
-const Chart4v1 = () => {
+const YearlyChart = () => {
   return (
     <ChartistGraph
       //className="revenueCard-chart"
@@ -47,4 +47,4 @@ const Chart4v1 = () => {
   )
 }
 
-export default Chart4v1
+export default YearlyChart

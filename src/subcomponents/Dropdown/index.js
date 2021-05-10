@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Menu, Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import IconDropdown from '../../assets/Images/Icon dropdown/Icon dropdown.png'
+
+
+
 
 const menu = (
   <Menu>
@@ -12,7 +15,9 @@ const menu = (
     <Menu.Item key="2">Log Out</Menu.Item>
   </Menu>
 );
-function index() {
+function DropdownComponent() {
+
+ 
     return (
         <div>
             <Dropdown overlay={menu} trigger={['click']}>
@@ -24,4 +29,4 @@ function index() {
     )
 }
 
-export default index
+export default DropdownComponent

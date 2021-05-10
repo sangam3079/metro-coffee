@@ -1,5 +1,4 @@
 import React from 'react' 
-import Chart from '../../subcomponents/Chart'
 import {Card, Row, Col, Divider} from 'antd'
 import './styles.scss'
 import RevenueCard from '../../subcomponents/Revenue Card'
@@ -90,7 +89,7 @@ function index() {
         {/*--------2nd row---------*/}
         <Col span={15}>
          <Card className='infocard'>
-           <RevenueCard />
+           <RevenueCard  />
          </Card>
         </Col>
         <Col span={9}>
