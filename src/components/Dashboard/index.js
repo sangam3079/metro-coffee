@@ -14,7 +14,7 @@ import arrowDown from '../../assets/Images/Icon feather-arrow-down (1)/Icon feat
 function index() {
   return (
     <div className='dashboard'>
-      <h1>Dashboard</h1>
+      <div className='dashboard-heading'>Dashboard</div>
       
       <Row gutter={[40,40]}>
         <Col  span={6}>

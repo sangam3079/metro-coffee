@@ -1,11 +1,16 @@
 import React from 'react'
+import CustomerTable from'./CustomerTable'
+import Header from '../../subcomponents/Header/Header'
+import './styles.scss'
 
-function index() {
+
+const Customer = () => {
     return (
-        <div>
-            <h1>customers</h1>
+        <div className='customerContainer'>
+            <Header />
+            <CustomerTable/>
         </div>
     )
 }
 
-export default index
+export default Customer

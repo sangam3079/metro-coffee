@@ -4,6 +4,15 @@ import {Table} from 'antd'
 import img from '../../assets/Images/pexels-chevanon-photography-312418/pexels-chevanon-photography-312418.png'
 
 
+const renderContent = (value, row, index) => {
+  const obj = {
+    children: value,
+    props: {},
+  };
+  
+  return obj;
+};
+
 const dataSource = [
     {
       key: '1',
@@ -25,17 +34,26 @@ const dataSource = [
       amount:200,
       status:'cancelled'
   },
-  
+  {
+    key: '3',
+    image: {img},
+    customer:'kevin',
+    name: 'Cold Americano',
+    order_no : 1234,
+    date:'6/5/2021',
+    amount:200,
+    status:'cancelled'
+},
       
      
 ];
   
 const columns = [
     {
-      title: 'Image',
+      title: 'Product Name',
       dataIndex: 'image',
       key: 'image',
-      width:50,
+      colSpan:2,
       render: (url, row) => {
         return (
             <img
@@ -53,7 +71,7 @@ const columns = [
       title: 'Name',
       dataIndex: 'name',
       key: 'name',
-      width:100,
+      colSpan:0,
       
     },
     {
@@ -62,10 +80,10 @@ const columns = [
       key: 'customer',
     },
     {
-      title: 'Order No',
+      title: 'Order no',
       dataIndex: 'order_no',
       key: 'order_no',
-      width:150
+    
     },
     {
       title: 'Date',
@@ -76,7 +94,7 @@ const columns = [
       title:'Amount',
       dataIndex:'amount',
       key:'amount'
-    },
+     },
     {
       title:'status',
       dataIndex:'status',
@@ -89,7 +107,13 @@ function RecentOrders() {
     return (
         <div className='recentOrders'>
             <text>Recent Orders</text>
-            <Table dataSource={dataSource} columns={columns} pagination={false} scroll={{ x: 0 }}/>
+            <Table 
+              className='recentOrders-table'
+              dataSource={dataSource} 
+              columns={columns} 
+              pagination={false}  
+              tableLayout='undefined' 
+            />
         </div>
     )
 }

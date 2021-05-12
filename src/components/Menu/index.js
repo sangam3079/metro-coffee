@@ -19,10 +19,8 @@ import {
 
 function index() {
     return (
-        <Menu
-            style={{ width: 200 , fontFamily:'Sofia Pro'}}
-            
-        >   <Menu.Item className='menuLogo'>
+        <Menu style={{ width: 200, fontFamily:'Sofia Pro', fontSize:17}}>   
+            <Menu.Item className='menuLogo'>
                 <img 
                    className='logo-img'
                    src={logo} 
@@ -34,9 +32,8 @@ function index() {
                    alt='menuIcon' 
                 />
             </Menu.Item>
-                <Menu.Item key="1" icon={<DashboardOutlined />} >
+                <Menu.Item key="1" icon={<DashboardOutlined />} style={{marginTop:40}}>
                     <Link to ='/home/dashboard'>
-                       
                        Dashboard
                     </Link>
                 </Menu.Item>

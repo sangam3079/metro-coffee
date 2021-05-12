@@ -5,6 +5,7 @@ import Menu from '../Menu'
 import NavBar from '../NavBar'
 import Dashboard from '../Dashboard'
 import Customers from '../Customers'
+import CustomerDetails from '../Customers/CustomerDetails'
 import './styles.scss'
 
 
@@ -22,6 +23,14 @@ function index() {
             </div>
             <div className='main'>
                 <Switch>
+                    <Route
+                        exact
+                        path="/home/customers/detail"
+                        render={() => (
+                            <CustomerDetails/>
+
+                        )}
+                    />
                     <Route
                         exact
                         path="/home/customers"

@@ -13,11 +13,13 @@ function handleChange(value) {
 
 function index() {
     return (
-        <div style={{background:'#E7E7F6 ', borderRadius:17, fontFamily:'Sofia Pro'}}>
-            <Select defaultValue="week" style={{ width: 120}} bordered={false} onChange={handleChange}>
-                <Option value="week">This week</Option>
-                <Option value="month">This month</Option>
-                <Option value="year">This year</Option>
+        <div style={{background:'#F6F6FB  ', borderRadius:8, fontFamily:'Sofia Pro',}}>
+            <Select placeholder={'Status'}  style={{ width: 100 }} bordered={false} onChange={handleChange}>
+                <Option value="active">Active</Option>
+                <Option value="inactive">In Active</Option>
+                <Option value="pending">Pending</Option>
+                <Option value="suspended">Suspended</Option>
+                
             </Select>
         </div>
     )

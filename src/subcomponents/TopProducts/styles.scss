@@ -3,7 +3,7 @@
     
 }
 .topProducts-header {
-    height: 50px;
+    //height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,5 +22,6 @@
 }
 
 .topProducts-list {
+    margin-top:8%;
     height: 300px;
 }
