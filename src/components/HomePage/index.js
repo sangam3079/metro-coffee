@@ -6,6 +6,8 @@ import NavBar from '../NavBar'
 import Dashboard from '../Dashboard'
 import Customers from '../Customers'
 import CustomerDetails from '../Customers/CustomerDetails'
+import Products from '../Products'
+import Orders from '../Orders'
 import './styles.scss'
 
 
@@ -23,6 +25,22 @@ function index() {
             </div>
             <div className='main'>
                 <Switch>
+                    <Route
+                        exact
+                        path="/home/orders"
+                        render={() => (
+                            <Orders/>
+
+                        )}
+                    />
+                    <Route
+                        exact
+                        path="/home/products"
+                        render={() => (
+                            <Products/>
+
+                        )}
+                    />
                     <Route
                         exact
                         path="/home/customers/detail"

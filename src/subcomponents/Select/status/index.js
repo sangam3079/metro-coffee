@@ -11,10 +11,10 @@ function handleChange(value) {
 
 
 
-function index() {
+const AntSelect =({selectTitle,}) => {
     return (
         <div style={{background:'#F6F6FB  ', borderRadius:8, fontFamily:'Sofia Pro',}}>
-            <Select placeholder={'Status'}  style={{ width: 100 }} bordered={false} onChange={handleChange}>
+            <Select placeholder={selectTitle}  style={{ width: 100 }} bordered={false} onChange={handleChange}>
                 <Option value="active">Active</Option>
                 <Option value="inactive">In Active</Option>
                 <Option value="pending">Pending</Option>
@@ -25,4 +25,4 @@ function index() {
     )
 }
 
-export default index
+export default AntSelect

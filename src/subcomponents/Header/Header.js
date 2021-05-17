@@ -1,54 +1,52 @@
 import React,{useState} from 'react'
-import {Link} from 'react-router-dom'
-import NewCustomer from '../../components/Customers/NewCustomer'
 import searchIcon from '../../assets/Images/searchicon/Group 29.png'
-import Select from '../../subcomponents/Select'
-import {Drawer} from 'antd'
+import StatusSelect from '../../subcomponents/Select/status'
+import CategorySelect from '../../subcomponents/Select/categories'
 import './styles.scss'
 import AddIcon from '../../assets/Images/AddIcon/Icon feather-plus.png'
 
-function Header() {
+function Header({title, button,status,inputSearch, categories}) {
 
-    const [visible, setVisible] = useState(false);
-
-    const showDrawer = () => {
-        setVisible(true);
-    };
-
-    const onClose = () => {
-        setVisible(false);
-    };
+    
     return (
         <div>
             <div className='Header'>
-                <text className='Header-title'>Customers</text>
+                <text className='Header-title'>{title}</text>
                 <div className='Header-content'>
-                    <div className="Header-searchBar">
-                        <img src={searchIcon} alt='searchIcon' />
-                        <input className="Header-searchInput" type="text" placeholder="search by name"/>
-                    </div>
-                    <div className="Header-select">
-                       <Select />
-                    </div>
+
+                    {categories ?
+                            <div className="Header-categories">
+                                <CategorySelect selectTitle='category'/>
+                            </div>
+                        :null    
+                    }
+
+                    {inputSearch ?
+                            <div className="Header-searchBar">
+                                <img src={searchIcon} alt='searchIcon' />
+                                <input className="Header-searchInput" type="text" placeholder="search by name"/>
+                            </div>
+
+                        : null
+                    }
+
                     
-                    <button className='Header-button' onClick={showDrawer}>
-                        <img src={AddIcon} alt='add icon'/>
-                        <text>Add</text>
-                    </button>
+                    {status 
+                        ? 
+                            <div className="Header-select">
+                            <StatusSelect selectTitle='status' />
+                            </div>
+
+                        :    null
+
+                    }
+                     
+
+                   {button? button : <> </>}
 
                 </div>
             </div>
-            <Drawer
-                title="Add Customer"
-                placement="right"
-                closable={true}
-                onClose={onClose}
-                visible={visible}
-                width={350}
-            >  
-              <NewCustomer/>
-                  
-            </Drawer>
+            
         </div>
     )
 }

@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
+import './fonts/Sofia/Sofia Pro Regular Az.otf';
+
+
+
 
 ReactDOM.render(
   <React.StrictMode>

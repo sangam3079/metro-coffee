@@ -1,0 +1,19 @@
+@import '../../styles/sass/abstracts/mixins.scss';
+
+.ordersContainer {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+
+.ordersCard {
+    background:white;
+    border-radius: 14px;
+}
+
+.ordersTable {
+    margin: 2%;
+    border: 1px  solid transparent;
+    border-radius:10px;
+}

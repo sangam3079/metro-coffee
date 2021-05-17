@@ -1,16 +1,13 @@
 import React,{useState} from 'react'
-import CustomerTable from'./CustomerTable'
-import Header from '../../subcomponents/Header/Header'
 import './styles.scss'
+import Header from '../../subcomponents/Header/Header'
 import {Drawer} from 'antd'
 import NewCustomer from '../../components/Customers/NewCustomer'
 import AddIcon from '../../assets/Images/AddIcon/Icon feather-plus.png'
-import Select from '../../subcomponents/Select/status'
+import ProductsTable from './ProductsTable'
+import NewProducts from './NewProducts'
 
-
-
-
-const Customer = () => {
+function Products() {
 
     const [visible, setVisible] = useState(false);
 
@@ -22,9 +19,10 @@ const Customer = () => {
         setVisible(false);
     };
     return (
-        <div className='customerContainer'>
+        <div className='productsContainer'>
             <Header 
-                title='Customer' 
+                title='Products'
+                categories={true}
                 inputSearch={true}
                 status={true}
                 button={
@@ -34,20 +32,20 @@ const Customer = () => {
                     </button>
                 }
             />
-            <CustomerTable/>
+            <ProductsTable />
+
             <Drawer
-                title="Add Customer"
+                title="Add Product"
                 placement="right"
                 closable={true}
                 onClose={onClose}
                 visible={visible}
                 width={350}
             >  
-              <NewCustomer/>
-                  
+                <NewProducts /> 
             </Drawer>
         </div>
     )
 }
 
-export default Customer
+export default Products

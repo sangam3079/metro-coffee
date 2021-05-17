@@ -45,10 +45,14 @@ function index() {
                
             </Menu.Item>
             <Menu.Item key="3" icon={<CoffeeOutlined />}>
-               Product
+                <Link to ='/home/products'>
+                  Products
+                </Link>
             </Menu.Item>
             <Menu.Item key="4" icon={<ShopOutlined />}>
-               Order
+                <Link to ='/home/orders'>
+                  Orders
+                </Link>
             </Menu.Item>
             
             

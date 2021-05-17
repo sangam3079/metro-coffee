@@ -16,9 +16,14 @@
     opacity: 1
 }
 .Header-content {
-    width: 500px;
+    width: 520px;
     @include flexBox-row-align-center;
     justify-content:space-between;
+    
+}
+
+.Header-categories {
+    height: 32px;
     
 }
 

@@ -1,7 +1,9 @@
 import React from 'react'
+import './index.css'
 import 'antd/dist/antd.css';
 import HomePage from '../src/components/HomePage'
 import { Switch, Route, Link } from 'react-router-dom';
+
 
 
 function App() {
